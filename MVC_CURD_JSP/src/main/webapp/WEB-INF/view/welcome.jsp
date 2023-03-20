@@ -10,9 +10,9 @@
 </head>
 <body>
 <h1>hello welcome to springmvc</h1>
-
-<table>
-        <tr>
+<a href="./reg" text-align="center">Register_NEW_PERSON</a>
+<table border="1" width="500" align="center">
+        <tr bgcolor="red">
             <th>person ID</th>
             <th>person NAME</th>
             <th>person salary</th>

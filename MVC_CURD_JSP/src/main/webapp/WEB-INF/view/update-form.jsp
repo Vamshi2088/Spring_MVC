@@ -12,10 +12,10 @@
 <label for="id">Id:</label>
 <input type="text" name="id" value="${p.id}" readonly="readonly"><br><br>
 
-<label for="name">Id:</label>
+<label for="name">name:</label>
 <input type="text" name="name" value="${p.name}"><br><br>
 
-<label for="salary">Id:</label>
+<label for="salary">salary:</label>
 <input type="text" name="salary" value="${p.salary}"><br><br>
 
 
