@@ -2,6 +2,7 @@ package com.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.daolayer.PrsDaoImpl;
@@ -44,5 +46,28 @@ public class Contrl {
 		return "redirect:a";
 
 	}
-
+	@GetMapping("/delete")
+	public String delete(@RequestParam Integer id) {
+		
+		ps.delete(id);
+		
+		return "redirect:a";
+		
+	}
+	
+	@GetMapping("/getbyid")
+	public ModelAndView getById(@RequestParam Integer id) {
+		
+		Person person = ps.getbyID(id);
+		
+		return new ModelAndView("update-form","p",person);
+		
+	}
+	
+	@PostMapping("/update")
+	public String update(Person p) {
+		ps.UPDAT(p);
+		return "redirect:a";
+		
+	}
 }
